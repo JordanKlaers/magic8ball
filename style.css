@@ -1,0 +1,88 @@
+#eightball{
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*margin: auto;*/
+  /*background-image: url("http://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/magic8ball/magic8ball.jpg");*/
+}
+body{
+  height: 50vh;
+  width: 50vw;
+  position: relative;
+}
+img{
+  position: absolute;
+  margin: 50%;
+}
+
+
+#answer{
+  color: white;
+  position: absolute;
+    margin: 98%;
+}
+
+.shake{
+  animation: fade 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.hide{
+  display: none;
+}
+
+
+
+img:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(20px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(40px, 0, 0);
+  }
+}
+
+
+@keyframes fade {
+  10%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(20px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(40px, 0, 0);
+  }
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .4;
+  }
+  100%{
+    opacity: 1;
+  }
+}
